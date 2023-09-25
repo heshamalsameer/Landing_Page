@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.navitem {
+    position: relative;
+}
+.navitem::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: rgb(112, 121, 202);
+    left: 0;
+    bottom: -2px;
+    transition: 0.3s;
+}
+.navitem:hover::before {
+    width: 100%;
+}
+.swiper {
+    position: relative;
+}
+.swiper::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:#0051ff1e;
+    left: 0;
+    bottom: 0;
+    z-index: 20;
+}
+.video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+.menu {
+    z-index: 10000;
+}
+.menu::before {
+    position: absolute;
+    content: '';
+    width: 300px;
+    height: 60vh;
+    background-color: #06b6d461;
+    top:0;
+    right: 0;
+    transition: 0.3s linear;
+    clip-path: circle(78.2% at 50% 1%);
+}
